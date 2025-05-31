@@ -1388,19 +1388,17 @@ if you do not want an image and overlay, delete these lines from the book/tv/sho
 
 <script>
 
-$.ajax({ 
-    type: 'GET', 
-    url: 'https://github.com/elumish/Books/blob/5aed161adc79420620daeb94457787deda2ebfc2/JSON_20250531.json', 
-    data: { get_param: 'value' }, 
-    dataType: 'json',
-    success: function (data) { 
-        $.each(data, function(index, element) {
-            $('body').append($('<h1>', {
-                text: element.title
-            }));
-        });
-    }
-});
+function readJSON(file) {
+    var request = new XMLHttpRequest();
+    request.open('GET', file, false);
+    request.send(null);
+    if (request.status == 200)
+        return request.responseText;
+};
+
+var bookJSON = JSON.parse(readJSON('https://github.com/elumish/Books/blob/3cc9aaeca0ab295ec43c470279eedbc2e1434898/JSON_20250531.json'));
+var myObj = JSON.parse(bookJSON);
+document.getElementById("title").innerHTML = myObj.title;
 
 $(document).ready(function() {
  var $container = $("#content"); 
