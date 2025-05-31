@@ -3910,6 +3910,21 @@ if you do not want an image and overlay, delete these lines from the book/tv/sho
 <script src="https://static.tumblr.com/p0knose/FpAp5c11c/magnusthemes.combofilters.js"></script>
 
 <script>
+
+$.ajax({ 
+    type: 'GET', 
+    url: 'http://example/functions.php', 
+    data: { get_param: 'value' }, 
+    dataType: 'json',
+    success: function (data) { 
+        $.each(data, function(index, element) {
+            $('body').append($('<div>', {
+                text: element.name
+            }));
+        });
+    }
+});
+
 $(document).ready(function() {
  var $container = $("#content"); 
  var filters = {};
