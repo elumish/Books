@@ -1,4 +1,5 @@
 {
+  "books": [
   "index1": [
     {
       "title": "In the Service of the King",
@@ -5994,4 +5995,5 @@
       "key": "a275"
     }
   ]
+]
 }
