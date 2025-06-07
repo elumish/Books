@@ -674,7 +674,6 @@ if you do not want an image and overlay, delete these lines from the book/tv/sho
 
 const bookList =
 '{
-  "books": [
   'index1': [
     {
       "title": "In the Service of the King",
@@ -6670,8 +6669,7 @@ const bookList =
       "key": "a275"
     }
   ]
-]
-}';
+]';
 	const bookObject = JSON.parse(bookList);
 
 	document.getElementById("h1").innerHTML = bookObject[0].title;
