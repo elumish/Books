@@ -1,6 +1,4 @@
-const bookList =
 {
-  "books": [
   "index1": [
     {
       "title": "In the Service of the King",
@@ -5996,5 +5994,4 @@ const bookList =
       "key": "a275"
     }
   ]
-]
 }
